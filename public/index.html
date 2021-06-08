@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='/js/index.js'></script>
+    <title>노드를 이용한 채팅기능</title>
+  </head>
+  <body>
+    <ul class='pages'>
+      <li class='chat page'>
+        <div class="chatArea">
+          <ul class='messages'></ul>
+        </div>
+        <input type="text" class='inputMessage' placeholder="내용을 입력하세요.">
+      </li>
+      <li class='login page'>
+        <div class="form">
+          <h3 class='title'>닉네임을 입력해주세요.</h3>
+          <input type="text" class='usernameInput' maxlength='14'>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
