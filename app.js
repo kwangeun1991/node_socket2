@@ -102,6 +102,6 @@ app.use((err, req, res, next) => {
   //res.json(err);
 });
 
-app.listen(app.get('port'), () => {
+server.listen(app.get('port'), () => {
   console.log(app.get('port'), '번 포트에서 대기중');
 });

@@ -1,8 +1,3 @@
-const express = require('express');
-const app = express();
-const server = require('http').createServer(app);
-const io = require('socket.io')(server);
-
 $(() => {
   const FADE_TIME = 150;
   const TYPING_TIMER_LENGTH = 400;
@@ -20,7 +15,7 @@ $(() => {
   const $loginPage = $('.login.page');        // The login page
   const $chatPage = $('.chat.page');          // The chatroom page
 
-  const socket = io();
+  //const socket = io();
 
   // 유저이름 세팅하기
   let username;
@@ -89,7 +84,7 @@ $(() => {
       .text(data.message);
 
     const typingClass = data.typing?'typing':'';
-    const $messagDiv = $('<li class="message">')
+    const $messageDiv = $('<li class="message">')
       .data('username', data.username)
       .addClass(typingClass)
       .append($usernameDiv, $messageBodyDiv);
@@ -97,7 +92,7 @@ $(() => {
     addMessageElement($messageDiv, options);
   }
 
-  // 메세지 입력한 (시작화한) 추가
+  // 메세지 입력한 (시각화한) 추가
   const addChatTyping = (data) => {
     data.typing =true;
     data.message = '입력중..';
