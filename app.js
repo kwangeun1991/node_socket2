@@ -62,9 +62,15 @@ io.on('connection', (socket) => {
     });
   });
 
-  socket.in('typing', () => {
-    socket.broadcast.emit('stop typing', {
+  socket.on('typing', () => {
+    socket.broadcast.emit('typing', {
       username: socket.username
+    });
+  });
+
+  socket.on('stop typing', () => {
+    socket.broadcast.emit('stop typing', {
+      username: socket.username,
     });
   });
 

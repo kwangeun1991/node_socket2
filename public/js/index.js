@@ -94,7 +94,7 @@ $(() => {
 
   // 메세지 입력한 (시각화한) 추가
   const addChatTyping = (data) => {
-    data.typing =true;
+    data.typing = true;
     data.message = '입력중..';
     addChatMessage(data);
   }
